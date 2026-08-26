@@ -1,0 +1,5 @@
+﻿"Model,Accuracy,Macro_F1"
+"Baseline,0.8320,0.3760"
+"VDN,0.8450,0.3943"
+"LDN,0.8540,0.4069"
+"SASA-Net,0.8500,0.3910"
