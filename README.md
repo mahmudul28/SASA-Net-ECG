@@ -393,7 +393,6 @@ Several configurations were evaluated during the development of the final experi
 
 | Configuration           | Best Macro-F1 / Result | Observation                                                                                      |
 | ----------------------- | ---------------------: | ------------------------------------------------------------------------------------------------ |
-| VDN (Variance-Ranked)   |                 0.4160 | Selected top-40 bins by variance; 18 of the 40 selected bins overlapped with FDN                 |
 | FDN                     |                 0.3847 | Learnable frequency selection was used to identify the compact 40-bin representation             |
 | Extended Budget         |                 0.3852 | Increasing the representation to 49 bins did not provide a statistically significant improvement |
 | Two-Stage Cascade       |                 0.3827 | Binary N-vs-Ectopic followed by a 4-way split provided no additive gain                          |
@@ -403,7 +402,7 @@ Several configurations were evaluated during the development of the final experi
 | Deep SASA (SE-ResNet)   |                 0.3500 | The larger network showed overfitting to augmented minority samples                              |
 | Multi-Domain SASA       |                 0.3500 | Additional WPD features were redundant with DCT and caused ONNX issues                           |
 | ResGate                 |                <0.4000 | Residual MLP gating reduced the sharpness of the learned gate output                             |
-| Random Split            |                    N/A | Evaluated separately to examine the effect of patient-level leakage                              |
+| Random Split            |                  0.620 | Evaluated separately to examine the effect of patient-level leakage                              |
 
 ---
 
@@ -550,21 +549,3 @@ The derived 40-DCT feature dataset is also available on Kaggle:
 
 ---
 
-# Citation
-
-If this repository is used in research or derived work, please cite the associated publication when available.
-
-```bibtex
-@misc{sasa_net_ecg,
-  title  = {ECG-MIT BIH: Sub-50 KB Inter-Patient Arrhythmia Classification},
-  author = {Mahmudul Hasan},
-  year   = {2026},
-  url    = {https://github.com/mahmudul28/SASA-Net-ECG}
-}
-```
-
----
-
-# License
-
-See [`LICENSE`](LICENSE) for the license applicable to this repository.
